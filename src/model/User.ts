@@ -26,7 +26,7 @@ export interface User extends Document {
   isVerified: boolean;
   isAcceptingMessages: boolean;
   messages: Message[];
-  
+  //comments
 }
 
 // Updated User schema
