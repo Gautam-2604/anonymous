@@ -5,6 +5,7 @@ export async function POST(request: Request){
     await dbConnect()
     try {
         const {username, code} = await request.json()
+        //decoding from url is a property of NextJS
         const decodedUsername = decodeURIComponent(username)
         const user = await UserModel.findOne({username: decodedUsername})
         if(!user){
@@ -42,6 +43,7 @@ export async function POST(request: Request){
         return Response.json({
             success: false,
             message:"Error in verifying code"
+            
         },{status:500})
         
     }
