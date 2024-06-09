@@ -41,6 +41,13 @@ export async function GET(request: Request) {
             
         },{status:200})
     } catch (error) {
+        console.log("error in getMessages",error);
+        
+        return Response.json({
+            success: false,
+            messages:"Internal server error"
+            
+        },{status:500})
         
     }
     
