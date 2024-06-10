@@ -56,6 +56,7 @@ export default function SendMessage() {
 
   const handleMessageClick = (message: string) => {
     form.setValue('content', message);
+    //
   };
 
   const [isLoading, setIsLoading] = useState(false);
